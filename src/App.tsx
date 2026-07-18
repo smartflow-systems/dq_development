@@ -28,14 +28,19 @@ const SERVICES = [
 
 const GALLERY = [
   {
+    src: '/images/F93CFCE0-1F86-43D7-8CB4-1B9164D266FC.jpeg',
+    label: 'Completed Rear Extension with Bi-Fold Doors',
+    alt: 'Completed rear house extension with grey bi-fold doors, tiled pitched roof and Velux skylights',
+  },
+  {
     src: '/images/3C513492-4EFB-48E3-A67D-0A6C46B177AE.jpeg',
-    label: 'Roof Construction',
-    alt: 'Roof construction in progress showing timber roof trusses and scaffolding',
+    label: 'Roof Frame Construction',
+    alt: 'New roof frame construction showing timber trusses and rafter structure on a residential extension with scaffolding',
   },
   {
     src: '/images/D5856254-97CC-488A-A884-33DCACC1787E.jpeg',
     label: 'Extension Build in Progress',
-    alt: 'Residential extension build showing brickwork, structural opening and groundworks in progress',
+    alt: 'Residential front extension under construction showing new brickwork, window openings and groundworks in progress',
   },
 ];
 
@@ -53,9 +58,13 @@ const WORK_TYPES = [
   'Property Development', 'Other',
 ];
 
+// dq-logo-dark.jpeg
 const LOGO_DARK = '/images/F1FA7E51-4863-474C-BA25-2BEE07DFC9A7.jpeg';
+// dq-logo-light.jpeg
 const LOGO_LIGHT = '/images/C8371CCD-9635-41DC-A302-62F43BA0C060.jpeg';
-const HERO_BG = '/images/D5856254-97CC-488A-A884-33DCACC1787E.jpeg';
+// hero-extension.jpeg — completed rear extension with bi-fold doors
+const HERO_BG = '/images/F93CFCE0-1F86-43D7-8CB4-1B9164D266FC.jpeg';
+// project-roof-frame.jpeg — roof trusses under construction
 const ABOUT_IMG = '/images/3C513492-4EFB-48E3-A67D-0A6C46B177AE.jpeg';
 
 // ─── Header ──────────────────────────────────────────────────────────────────
@@ -118,7 +127,7 @@ function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={HERO_BG} alt="DQ Developments extension build" className="w-full h-full object-cover object-center" />
+        <img src={HERO_BG} alt="Completed rear house extension with bi-fold doors and tiled pitched roof by DQ Developments Ltd" className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-[#050505]/70 to-[#050505]/90" />
       </div>
 
@@ -164,7 +173,7 @@ function About() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative">
             <div className="absolute -inset-1 bg-[#D10A17]/20 rounded-lg blur-sm" />
-            <img src={ABOUT_IMG} alt="DQ Developments roof construction in progress" className="relative w-full h-80 md:h-[460px] object-cover rounded-lg" loading="lazy" />
+            <img src={ABOUT_IMG} alt="Residential extension roof frame under construction showing new timber trusses and rafter structure with scaffolding" className="relative w-full h-80 md:h-[460px] object-cover rounded-lg" loading="lazy" />
             <div className="absolute bottom-4 left-4 bg-[#050505]/90 border border-[#2B2B2B] rounded-lg px-4 py-3">
               <img src={LOGO_LIGHT} alt="DQ Developments Ltd" className="h-10 object-contain" />
             </div>
@@ -254,10 +263,10 @@ function Gallery() {
             <button
               key={img.src}
               onClick={() => setLightboxIndex(i)}
-              className="group relative overflow-hidden rounded-lg aspect-[4/3]"
+              className={`group relative overflow-hidden rounded-lg ${i === 0 ? 'sm:col-span-2 aspect-[16/7]' : 'aspect-[4/3]'}`}
               aria-label={`View ${img.label} in full size`}
             >
-              <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <span className="text-white font-semibold text-sm">{img.label}</span>
