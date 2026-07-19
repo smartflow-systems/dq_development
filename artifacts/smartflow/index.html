@@ -79,7 +79,76 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23050505'/><text y='.9em' font-size='60' font-family='Arial' font-weight='bold' fill='%23E30613' x='8'>DQ</text></svg>" />
   </head>
   <body>
-    <div id="root"></div>
+    <!--
+      Static fallback content — rendered in the raw HTML response.
+      AI crawlers and social bots that do not execute JavaScript read this.
+      React replaces it on mount; sighted users see the full SPA.
+    -->
+    <div id="root"><div style="background:#050505;color:#f5f5f5;font-family:Inter,sans-serif;min-height:100vh;padding:2rem 1.5rem;box-sizing:border-box">
+      <header style="margin-bottom:2rem">
+        <strong style="font-size:1.25rem;font-family:Poppins,sans-serif">DQ Developments Ltd</strong>
+        <nav style="margin-top:0.75rem;font-size:0.875rem">
+          <a href="#about"    style="color:#b7b7b7;margin-right:1rem;text-decoration:none">About</a>
+          <a href="#services" style="color:#b7b7b7;margin-right:1rem;text-decoration:none">Services</a>
+          <a href="#projects" style="color:#b7b7b7;margin-right:1rem;text-decoration:none">Projects</a>
+          <a href="#contact"  style="color:#b7b7b7;text-decoration:none">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section aria-label="Hero" style="margin-bottom:2.5rem">
+          <h1 style="font-family:Poppins,sans-serif;font-size:2.25rem;font-weight:800;line-height:1.1;margin:0 0 1rem">
+            Building Excellence<br />
+            <span style="color:#e30613">From Foundation</span><br />
+            to Finish
+          </h1>
+          <p style="color:#b7b7b7;max-width:40rem;margin:0 0 1.25rem">
+            Professional building and property development services delivered with care, clear communication and quality workmanship.
+          </p>
+          <p style="margin:0">
+            <a href="tel:07988340727" style="color:#e30613;font-weight:600;text-decoration:none">07988 340727</a>
+          </p>
+        </section>
+
+        <section id="about" aria-label="About" style="margin-bottom:2.5rem">
+          <h2 style="font-family:Poppins,sans-serif;font-size:1.5rem;font-weight:700;margin:0 0 0.75rem">About Us</h2>
+          <p style="color:#b7b7b7;max-width:40rem;margin:0">
+            DQ Developments Ltd provides professional building and property development services for residential projects.
+            Led by Anthony Digle, the company focuses on dependable service, attention to detail and quality workmanship
+            from the early stages of a project through to completion.
+          </p>
+        </section>
+
+        <section id="services" aria-label="Services" style="margin-bottom:2.5rem">
+          <h2 style="font-family:Poppins,sans-serif;font-size:1.5rem;font-weight:700;margin:0 0 0.75rem">Our Services</h2>
+          <ul style="color:#b7b7b7;padding-left:1.25rem;margin:0;line-height:2">
+            <li>Home Extensions — rear, side and double-storey extensions to add space and value</li>
+            <li>Property Renovations — full and partial renovations for existing residential properties</li>
+            <li>Brickwork &amp; Blockwork — quality brickwork for new builds and extensions</li>
+            <li>Roofing — pitched and flat roof construction including tiling and Velux installations</li>
+            <li>Structural Alterations — load-bearing wall removals and structural modifications</li>
+            <li>Bi-Fold Door Installation — aluminium bi-fold and patio door fitting</li>
+            <li>General Building Work — all aspects of residential construction and maintenance</li>
+            <li>Property Development — residential property acquisition, conversion and development</li>
+          </ul>
+        </section>
+
+        <section id="contact" aria-label="Contact" style="margin-bottom:2.5rem">
+          <h2 style="font-family:Poppins,sans-serif;font-size:1.5rem;font-weight:700;margin:0 0 0.75rem">Contact</h2>
+          <address style="font-style:normal;color:#b7b7b7;line-height:2">
+            <strong style="color:#f5f5f5">Anthony Digle — DQ Developments Ltd</strong><br />
+            Phone: <a href="tel:07988340727" style="color:#e30613;text-decoration:none">07988 340727</a><br />
+            Email: <a href="mailto:dpdevelpments.ltd@yahoo.com" style="color:#e30613;text-decoration:none">dpdevelpments.ltd@yahoo.com</a><br />
+            Instagram: <a href="https://www.instagram.com/dq_development" rel="noopener noreferrer" style="color:#b7b7b7;text-decoration:none">@dq_development</a><br />
+            Website: <a href="https://dqdevelopments.online/" style="color:#b7b7b7;text-decoration:none">https://dqdevelopments.online/</a>
+          </address>
+        </section>
+      </main>
+
+      <footer style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1rem;color:rgba(255,255,255,0.25);font-size:0.75rem">
+        &copy; 2025 DQ Developments Ltd. All rights reserved.
+      </footer>
+    </div></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
