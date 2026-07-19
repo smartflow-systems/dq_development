@@ -77,6 +77,48 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" /></noscript>
 
+    <!-- Structured data: LocalBusiness, WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+          "@id": "https://dqdevelopments.online/#business",
+          "name": "DQ Developments Ltd",
+          "url": "https://dqdevelopments.online/",
+          "telephone": "+447988340727",
+          "email": "dpdevelpments.ltd@yahoo.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+447988340727",
+            "contactType": "customer service"
+          },
+          "sameAs": ["https://www.instagram.com/dq_development"],
+          "description": "Professional building and property development services for residential projects.",
+          "areaServed": "GB",
+          "serviceType": [
+            "Home Extensions",
+            "Property Renovations",
+            "Brickwork",
+            "Roofing",
+            "Structural Alterations",
+            "Bi-Fold Door Installation",
+            "General Building Work",
+            "Property Development"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dqdevelopments.online/#website",
+          "url": "https://dqdevelopments.online/",
+          "name": "DQ Developments Ltd",
+          "publisher": { "@id": "https://dqdevelopments.online/#business" }
+        }
+      ]
+    }
+    </script>
+
     <!-- Inline SVG favicon: dark background + red DQ lettermark -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23050505'/><text y='.9em' font-size='60' font-family='Arial' font-weight='bold' fill='%23E30613' x='8'>DQ</text></svg>" />
   </head>
