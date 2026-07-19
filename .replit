@@ -2,7 +2,8 @@ modules = ["nodejs-24"]
 
 [deployment]
 router = "application"
-deploymentTarget = "autoscale"
+deploymentTarget = "static"
+publicDir = "artifacts/smartflow/dist/public"
 
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]
