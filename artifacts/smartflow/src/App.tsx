@@ -740,7 +740,6 @@ function Footer() {
 
         <div className="border-t border-white/[0.06] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/25 text-xs">&copy; {year} DQ Developments Ltd. All rights reserved.</p>
-          <a href="#" className="text-white/20 hover:text-[#B7B7B7] text-xs transition-colors">Privacy Policy</a>
         </div>
       </div>
     </footer>
