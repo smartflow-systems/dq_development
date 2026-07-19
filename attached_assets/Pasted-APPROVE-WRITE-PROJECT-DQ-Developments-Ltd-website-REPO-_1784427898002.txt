@@ -1,0 +1,127 @@
+APPROVE WRITE
+
+PROJECT:
+DQ Developments Ltd website
+
+REPO:
+https://github.com/smartflow-systems/smartflow-systemsdq_development.git
+
+TASK:
+Add the newly uploaded branded social preview image and configure clean link-preview metadata for:
+
+https://dqdevelopments.online/
+
+SCOPE — ONE TASK ONLY
+
+The image has been uploaded as:
+
+public/social/dq-developments-share.png
+
+1. Update the root index.html <head>.
+
+Use exactly:
+
+<title>DQ Developments Ltd | Building & Property Development</title>
+
+<meta
+  name="description"
+  content="Professional building and property development services from DQ Developments Ltd. View recent work and contact Anthony to discuss your project."
+/>
+
+<link
+  rel="canonical"
+  href="https://dqdevelopments.online/"
+/>
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="DQ Developments Ltd" />
+<meta property="og:url" content="https://dqdevelopments.online/" />
+
+<meta
+  property="og:title"
+  content="DQ Developments Ltd | Building & Property Development"
+/>
+
+<meta
+  property="og:description"
+  content="Professional building and property development services. View recent projects and contact Anthony to discuss your next project."
+/>
+
+<meta
+  property="og:image"
+  content="https://dqdevelopments.online/social/dq-developments-share.png"
+/>
+
+<meta property="og:image:width" content="1731" />
+<meta property="og:image:height" content="909" />
+<meta property="og:image:type" content="image/png" />
+
+<meta
+  property="og:image:alt"
+  content="DQ Developments Ltd building and property development services"
+/>
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta
+  name="twitter:title"
+  content="DQ Developments Ltd | Building & Property Development"
+/>
+
+<meta
+  name="twitter:description"
+  content="Professional building and property development services. View recent projects and contact Anthony."
+/>
+
+<meta
+  name="twitter:image"
+  content="https://dqdevelopments.online/social/dq-developments-share.png"
+/>
+
+<meta
+  name="twitter:image:alt"
+  content="DQ Developments Ltd building and property development services"
+/>
+
+<meta name="theme-color" content="#050505" />
+
+2. Confirm that this URL will be served after deployment:
+
+https://dqdevelopments.online/social/dq-developments-share.png
+
+3. Do not:
+- Redesign the website
+- Change the colour palette
+- Change business details
+- Correct or alter the email spelling
+- Add analytics
+- Add tracking
+- Add a backend
+- Add cookies
+- Add unsupported business claims
+- Deploy automatically
+
+4. Verify with:
+
+npx tsc -b --noEmit
+npm run build
+
+5. If both checks pass, commit with:
+
+feat: add branded social link preview
+
+6. Push to main.
+
+7. Report:
+- Files changed
+- Final social image path
+- Metadata added
+- TypeScript result
+- Build result
+- Commit hash
+- Push result
+- Whether deployment is still required
+
+STOP CONDITION:
+Stop after the image, metadata, build verification, commit and push.
+Do not deploy or publish automatically.
