@@ -521,7 +521,23 @@ function Contact() {
   const onChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
 
-  const onSubmit = (e: FormEvent) => { e.preventDefault(); setSubmitted(true); };
+  const enquiryText = () => [
+    'New enquiry via dqdevelopments.online',
+    `Name: ${form.name}`,
+    form.phone   && `Phone: ${form.phone}`,
+    form.email   && `Email: ${form.email}`,
+    form.workType && `Type of work: ${form.workType}`,
+    form.details && `Details: ${form.details}`,
+  ].filter(Boolean).join('\n');
+
+  const onSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    window.open(`https://wa.me/447988340727?text=${encodeURIComponent(enquiryText())}`, '_blank', 'noopener');
+    setSubmitted(true);
+  };
+
+  const mailtoHref = () =>
+    `mailto:dpdevelpments.ltd@yahoo.com?subject=${encodeURIComponent('Enquiry — ' + (form.workType || 'Building project'))}&body=${encodeURIComponent(enquiryText())}`;
 
   const fieldCls = 'w-full bg-white/[0.06] border border-white/[0.10] hover:border-white/20 focus:border-[#E30613]/60 text-[#F5F5F5] placeholder-white/25 rounded-xl px-4 py-3 text-sm outline-none transition-colors';
   const labelCls = 'block text-[#B7B7B7] text-xs font-medium mb-1.5 tracking-wide';
@@ -622,13 +638,13 @@ function Contact() {
                     <Mail size={26} className="text-[#E30613]" />
                   </div>
                   <h3 className="font-bold text-[#F5F5F5] text-xl mb-2"
-                    style={{ fontFamily: 'Poppins, sans-serif' }}>Form Submitted</h3>
+                    style={{ fontFamily: 'Poppins, sans-serif' }}>Opening WhatsApp…</h3>
                   <p className="text-[#B7B7B7] text-sm max-w-sm leading-relaxed mb-5">
-                    <strong className="text-[#E30613]">Demo form only</strong> — please call or email DQ Developments directly to discuss your project.
+                    Your enquiry has been prepared in WhatsApp — just press send. Nothing is stored on this website.
                   </p>
                   <div className="flex gap-4">
                     <a href="tel:07988340727" className="text-[#F5F5F5] text-sm hover:text-[#E30613] transition-colors underline">07988 340727</a>
-                    <a href="mailto:dpdevelpments.ltd@yahoo.com" className="text-[#F5F5F5] text-sm hover:text-[#E30613] transition-colors underline">Send Email</a>
+                    <a href={mailtoHref()} className="text-[#F5F5F5] text-sm hover:text-[#E30613] transition-colors underline">Send by email instead</a>
                   </div>
                   <button onClick={() => setSubmitted(false)}
                     className="mt-6 text-[#B7B7B7] text-xs hover:text-[#F5F5F5] transition-colors">
@@ -675,7 +691,7 @@ function Contact() {
                     </button>
                     <p className="text-white/25 text-xs">* Required fields</p>
                   </div>
-                  <p className="text-white/20 text-[11px]">Demo form only — contact DQ Developments directly by phone or email.</p>
+                  <p className="text-white/20 text-[11px]">Sends your enquiry through WhatsApp — no details are stored on this website.</p>
                 </form>
               )}
             </div>
